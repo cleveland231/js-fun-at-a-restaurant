@@ -21,14 +21,15 @@ var inStock = '10'
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
 
-var inStock = (10 * 2);
+inStock *= 2;
 
 console.log(inStock);
 
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
 
-var inStock = (20 - 1);
+// inStock = inStock - 1;
+inStock -= 1;
 
 console.log(inStock);
 
@@ -47,10 +48,11 @@ var isFavorite = false
 // comparison operator.
 
 var shouldOrderMore = true;
-function evaluateOrder() {
-  if (instock < 20) {
-    console.log(true);
-  }
+
+if (inStock < 20) {
+  console.log(true);
+} else {
+  console.log(false)
 }
 
 
@@ -64,12 +66,11 @@ function evaluateOrder() {
 // 'We need to get some more [food].'
 
 var stockCount = 19;
-function evaluateCount() {
-  if (stockCount >= 1) {
-    console.log(`I'm going to eat some ${food}!`);
-  } else {
-    console.log(`We need to get some more ${food}.`);
-  }
+
+if (stockCount >= 1) {
+  console.log(`I'm going to eat some ${food}!`);
+} else {
+  console.log(`We need to get some more ${food}.`);
 }
 
 
@@ -80,13 +81,13 @@ function evaluateCount() {
 // the "food" variable should be included in the logged statement.
 
 var isFavorite = false;
-function evaluateFav() {
-  if (isFavorite === true) {
-    console.log(`My favorite food is ${food}`!);
-  } else {
-    console.log(`I recently ate ${food}.`);
-  }
+
+if (isFavorite === true) {
+  console.log(`My favorite food is ${food}!`);
+} else {
+  console.log(`I recently ate ${food}.`);
 }
+
 
 
 
@@ -100,7 +101,8 @@ var vegetables = ['brocoli', 'onion', 'zuchini', 'cucumber', 'tomato'];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
-vegetables[2];
+console.log(vegetables[2]);
+
 
 
 // Create a new variable "fruits" and assign it to an Array of 7
@@ -109,7 +111,7 @@ var fruits = ['apple', 'bananna', 'mango', 'coconut', 'strawberry', 'orange', 'l
 
 
 // Write the code to access the 5th element of the array, using bracket notation.
-fruits[4];
+console.log(fruits[4]);
 
 //------------------------- Objects -------------------------//
 
@@ -127,4 +129,6 @@ var groceryStore = {
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
 
-groveryStore.location = 'Denver, Colorado';
+groceryStore.location = 'Denver, Colorado';
+
+console.log(groceryStore);
